@@ -60,7 +60,7 @@ class SocketService extends GetxService {
     _socket.emit(SocketEvent.logout.name);
   }
 
-  void _sendMessageToChat(String message) {
+  void sendMessageToChat(String message) {
     _socket.emit(SocketEvent.newMessage.name, message);
   }
 }
