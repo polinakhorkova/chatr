@@ -10,15 +10,17 @@ class HomeView extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('HomeView'),
+        title: const Text('ВХОД'),
         centerTitle: true,
       ),
-      body: const Center(
-        child: Text(
-          'HomeView is working',
-          style: TextStyle(fontSize: 20),
-        ),
-      ),
+      body: Column(children: [
+        Text('Введите никнейм'),
+        TextField(
+          controller: controller.textCtrl,
+          onSubmitted: (value) => controller.sighIn(),
+        )
+
+      ],)
     );
   }
 }

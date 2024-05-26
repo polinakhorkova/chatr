@@ -16,7 +16,7 @@ class SocketService extends GetxService {
             .setPath('/chat/socket.io')
             .disableAutoConnect()
             .disableReconnection()
-            .build);
+            .build()); //СКОБКИ НЕ ПРОЕБАТЬ
     _socket.onConnect((data) {
       printInfo(info: 'Socket connected');
       _sendLoginMessage();

@@ -1,23 +1,13 @@
+import 'package:chatr/app/services/user_service.dart';
+import 'package:flutter/widgets.dart';
+
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
-  //TODO: Implement HomeController
-
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  final textCtrl = TextEditingController();
+  void sighIn() {
+    String username = textCtrl.text;
+    print(username);
+    UserService.to.setUsernameAmdConnect(username);
   }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
